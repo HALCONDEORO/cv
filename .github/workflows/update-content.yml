@@ -1,0 +1,27 @@
+name: Refresh generated content
+on:
+  schedule:
+    - cron: '17 */12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refresh top-repos block
+        run: python3 scripts/update_repos.py index.html
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add index.html
+            git commit -m "chore: refresh top repositories"
+            git push
+          else
+            echo "no change"
+          fi
