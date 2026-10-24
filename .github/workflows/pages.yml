@@ -22,7 +22,7 @@ jobs:
         run: python3 scripts/update_repos.py index.html
       - name: Print CV to PDF (headless Chrome)
         run: |
-          chromium --headless --disable-gpu --no-sandbox \
+          google-chrome --headless=new --disable-gpu --no-sandbox \
             --print-to-pdf=marco-tevar-cv.pdf --no-pdf-header-footer \
             "file://$GITHUB_WORKSPACE/index.html"
       - name: Fail if CV runs past 3 A4 pages
