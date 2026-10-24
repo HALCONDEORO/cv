@@ -27,9 +27,11 @@ jobs:
             "file://$GITHUB_WORKSPACE/index.html"
       - name: Fail if CV runs past 3 A4 pages
         run: |
-          sudo apt-get install -y -qq poppler-utils >/dev/null 2>&1
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
           pages=$(pdfinfo marco-tevar-cv.pdf | awk '/^Pages/{print $2}')
-          echo "PDF pages: $pages"
+          echo "PDF pages: [$pages]"
+          if [ -z "$pages" ]; then echo "pdfinfo did not return a page count"; exit 1; fi
           if [ "$pages" -gt 3 ]; then echo "CV too long"; exit 1; fi
       - uses: actions/upload-pages-artifact@v3
         with:
