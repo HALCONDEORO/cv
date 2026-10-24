@@ -18,25 +18,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Refresh top-repos block
+      - name: Refresh top-repos block (deploy-time only)
         run: python3 scripts/update_repos.py index.html
-      - name: Commit refreshed block if changed
-        run: |
-          if ! git diff --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add index.html
-            git commit -m "chore: refresh top repositories"
-            git push
-          fi
       - name: Print CV to PDF (headless Chrome)
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq chromium-browser >/dev/null 2>&1 || true
           chromium --headless --disable-gpu --no-sandbox \
             --print-to-pdf=marco-tevar-cv.pdf --no-pdf-header-footer \
             "file://$GITHUB_WORKSPACE/index.html"
       - name: Fail if CV runs past 3 A4 pages
         run: |
+          sudo apt-get install -y -qq poppler-utils >/dev/null 2>&1
           pages=$(pdfinfo marco-tevar-cv.pdf | awk '/^Pages/{print $2}')
           echo "PDF pages: $pages"
           if [ "$pages" -gt 3 ]; then echo "CV too long"; exit 1; fi
