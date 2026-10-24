@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marco Tevar - Developer &amp; Founder, MACD Adaptive</title>
+<meta name="description" content="Marco Tevar: founder of MACD Adaptive in Dublin. I build booking systems, websites and WhatsApp automation for small businesses, and open-source tools for fun.">
+<style>
+  :root { --ink:#1a1a1a; --muted:#555; --accent:#0b5fff; --line:#e2e2e2; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); max-width:820px; margin:0 auto; padding:2.5rem 1.25rem 4rem; line-height:1.55; }
+  header h1 { font-size:2rem; margin:0 0 .25rem; }
+  header .tag { color:var(--muted); font-size:1.05rem; margin:0 0 .75rem; }
+  .contact { font-size:.95rem; color:var(--muted); }
+  .contact a { color:var(--accent); text-decoration:none; margin-right:1rem; }
+  .langswitch { float:right; font-size:.9rem; }
+  .langswitch button { border:1px solid var(--line); background:#fff; padding:.2rem .6rem; cursor:pointer; border-radius:4px; }
+  .langswitch button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+  h2 { font-size:1.15rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); border-bottom:1px solid var(--line); padding-bottom:.3rem; margin-top:2.2rem; }
+  .job { margin:1rem 0 1.4rem; }
+  .job .when { color:var(--muted); font-size:.9rem; }
+  .job .role { font-weight:600; }
+  ul { padding-left:1.2rem; }
+  li { margin:.25rem 0; }
+  .macd { background:#f6f8ff; border:1px solid #dbe4ff; border-radius:8px; padding:1rem 1.2rem; }
+  .macd h2 { margin-top:0; border:none; }
+  .proj { margin:.9rem 0; }
+  .proj .name { font-weight:600; }
+  .proj .name a { color:var(--accent); text-decoration:none; }
+  .muted-small { color:var(--muted); font-size:.85rem; margin-top:1.2rem; }
+  .stars { color:var(--muted); font-size:.85rem; }
+  .skills span { display:inline-block; border:1px solid var(--line); border-radius:20px; padding:.15rem .7rem; margin:.15rem .2rem .15rem 0; font-size:.9rem; }
+  footer { margin-top:3rem; color:var(--muted); font-size:.85rem; border-top:1px solid var(--line); padding-top:1rem; }
+  [data-lang="es"] { display:none; }
+  body.es [data-lang="es"] { display:block; }
+  body.es [data-lang="en"] { display:none; }
+  @media print {
+    .langswitch { display:none; }
+    body { max-width:none; padding:0; font-size:10.5pt; }
+    a { color:var(--ink); }
+  }
+</style>
+</head>
+<body>
+<div class="langswitch"><button id="ben" class="on" onclick="setLang('en')">EN</button><button id="bes" onclick="setLang('es')">ES</button></div>
+
+<header>
+  <h1>Marco Tevar</h1>
+  <p class="tag" data-lang="en">Founder of MACD Adaptive (Dublin). I build booking systems, websites and WhatsApp automation that small businesses actually run on - and open-source tools for fun.</p>
+  <p class="tag" data-lang="es">Fundador de MACD Adaptive (Dublín). Construyo sistemas de reservas, webs y automatización por WhatsApp que las pymes usan de verdad - y herramientas open source por afición.</p>
+  <p class="contact">
+    <a href="https://macd.ie">macd.ie</a>
+    <a href="https://github.com/HALCONDEORO">github.com/HALCONDEORO</a>
+    <a href="mailto:macd@macd.ie">macd@macd.ie</a>
+    <span data-lang="en">Dublin, Ireland - English, Spanish</span>
+    <span data-lang="es">Dublín, Irlanda - inglés, español</span>
+  </p>
+</header>
+
+<section>
+  <h2 data-lang="en">What I do</h2>
+  <h2 data-lang="es">A qué me dedico</h2>
+  <div class="job">
+    <span class="when">2024 - </span>
+    <span class="role" data-lang="en">Founder &amp; Director, MACD Adaptive Limited</span>
+    <span class="role" data-lang="es">Fundador y director, MACD Adaptive Limited</span>
+    <ul data-lang="en">
+      <li>Design, build and run the whole stack myself: booking SaaS for SMEs (microsite per business, email/SMS/WhatsApp notifications, customer panel), company websites, and WhatsApp automation for orders and appointments.</li>
+      <li>Production infrastructure on Hetzner (Docker, Postgres, n8n), CI/CD with GitHub Actions, accessibility (WCAG) built in from the start.</li>
+      <li>Heavy use of AI agents in the development workflow - the product roadmap is executed with agent-assisted code review and testing gates.</li>
+    </ul>
+    <ul data-lang="es">
+      <li>Diseño, construyo y opero todo el stack yo mismo: SaaS de reservas para pymes (microsite por negocio, avisos por email/SMS/WhatsApp, panel de cliente), webs de empresa y automatización por WhatsApp para pedidos y citas.</li>
+      <li>Infraestructura de producción en Hetzner (Docker, Postgres, n8n), CI/CD con GitHub Actions, accesibilidad (WCAG) desde el diseño.</li>
+      <li>Uso intensivo de agentes de IA en el flujo de desarrollo: la hoja de ruta se ejecuta con revisión de código y puertas de testing asistidas por agentes.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 data-lang="en">Selected projects</h2>
+  <h2 data-lang="es">Proyectos destacados</h2>
+  <div class="proj">
+    <span class="name"><a href="https://github.com/HALCONDEORO/jw-sign-mosaic">Sign-language mosaic</a></span>
+    <span data-lang="en"> - an interactive artwork rendering one image as a mosaic of sign-language videos in 110+ sign languages, switchable live between Spanish and English.</span>
+    <span data-lang="es"> - una obra interactiva que compone una imagen como mosaico de vídeos de lengua de signos en más de 110 lenguas de signos, con cambio en vivo entre español e inglés.</span>
+  </div>
+  <div class="proj">
+    <span class="name"><a href="https://github.com/HALCONDEORO/gramps-web-toolkit">Gramps Web toolkit</a></span>
+    <span data-lang="en"> - tooling and fixes for Gramps Web, the self-hosted genealogy platform (contributions upstreamed).</span>
+    <span data-lang="es"> - herramientas y correcciones para Gramps Web, la plataforma de genealogía autoalojada (contribuciones integradas upstream).</span>
+  </div>
+  <div class="proj">
+    <span class="name"><a href="https://github.com/HALCONDEORO/almojarife-game">Almojarife</a></span>
+    <span data-lang="en"> - a trading and city-building browser game inspired by Patrician 3, built as an open-source JavaScript project with an automated simulation-based balance test suite.</span>
+    <span data-lang="es"> - un juego de comercio y construcción de ciudades en el navegador inspirado en Patrician 3, open source en JavaScript, con suite de balance automatizada por simulación.</span>
+  </div>
+  <!-- TOPREPOS:BEGIN -->
+<p class="muted-small">Top public repositories by stars (auto-updated):</p>
+  <div class="proj"><span class="name"><a href="https://github.com/HALCONDEORO/almojarife-game">almojarife-game</a></span> <span class="stars">(5 stars)</span> - Open-source sea-trading game on the Iberian and Mediterranean coast, 15th-16th c. Desktop browser game (Windows, Mac, Linux), English and Spanish. Early development, name provisional.</div>
+  <div class="proj"><span class="name"><a href="https://github.com/HALCONDEORO/jw-sign-mosaic">jw-sign-mosaic</a></span> <span class="stars">(1 stars)</span> - Watch JW Broadcasting in many sign languages at once - an unofficial personal video-wall page streaming from jw.org</div>
+  <div class="proj"><span class="name"><a href="https://github.com/HALCONDEORO/HALCONDEORO">HALCONDEORO</a></span> <span class="stars">(0 stars)</span> - Profile README</div>
+<!-- TOPREPOS:END -->
+</section>
+
+<section class="macd">
+  <h2>MACD Adaptive</h2>
+  <p data-lang="en">MACD Adaptive builds the digital presence of small businesses in Ireland: fast accessible websites, an online booking system with automated reminders, and WhatsApp automation so customers can book, order and ask without calling. Everything is operated and supported directly by me.</p>
+  <p data-lang="es">MACD Adaptive construye la presencia digital de las pymes en Irlanda: webs rápidas y accesibles, un sistema de reservas online con recordatorios automáticos y automatización por WhatsApp para que los clientes reserven, pidan y pregunten sin llamar. Todo lo opero y lo soporte yo directamente.</p>
+  <p><a href="https://macd.ie">macd.ie</a></p>
+</section>
+
+<section>
+  <h2 data-lang="en">Stack</h2>
+  <h2 data-lang="es">Stack</h2>
+  <p class="skills">
+    <span>JavaScript / Node.js</span><span>Python</span><span>HTML/CSS</span><span>PostgreSQL</span><span>Docker</span><span>n8n</span><span>GitHub Actions</span><span>Hetzner</span><span>GitHub API</span><span>LLM agents</span><span>WCAG / accesibilidad</span>
+  </p>
+</section>
+
+<footer>
+  <span data-lang="en">This page is its own source: one HTML file, no build. The PDF version is generated from this page on every deploy.</span>
+  <span data-lang="es">Esta página es su propio código: un solo HTML, sin build. La versión PDF se genera desde esta página en cada despliegue.</span>
+</footer>
+
+<script>
+function setLang(l){ document.body.className = l==='es' ? 'es' : ''; document.getElementById('ben').className = l==='en'?'on':''; document.getElementById('bes').className = l==='es'?'on':''; }
+</script>
+</body>
+</html>
