@@ -34,9 +34,15 @@
   [data-lang="es"] { display:none; }
   body.es [data-lang="es"] { display:block; }
   body.es [data-lang="en"] { display:none; }
+  @page { margin: 11mm; }
   @media print {
     .langswitch { display:none; }
-    body { max-width:none; padding:0; font-size:10.5pt; }
+    body { max-width:none; padding:0; font-size:9pt; line-height:1.4; }
+    header h1 { font-size:1.5rem; }
+    h2 { margin-top:1.1rem; font-size:1rem; }
+    .job, .proj { margin:.5rem 0; }
+    .macd { padding:.6rem .9rem; }
+    footer { margin-top:1.2rem; }
     a { color:var(--ink); }
   }
 </style>
