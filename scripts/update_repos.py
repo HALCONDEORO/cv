@@ -26,7 +26,7 @@ def render_block(repos):
         desc = (r.get("description") or "").strip()
         items.append(
             f'  <div class="proj"><span class="name"><a href="{r["html_url"]}">{r["name"]}</a></span>'
-            f' <span class="stars">({r.get("stargazers_count", 0)} stars)</span>'
+            f' <span class="stars">({r.get("stargazers_count", 0)} {"star" if r.get("stargazers_count", 0) == 1 else "stars"})</span>'
             + (f' - {desc}' if desc else '') + '</div>')
     body = "\n".join(items) if items else "  <!-- no repos found -->"
     return f'{BEGIN}\n<p class="muted-small">Top public repositories by stars (auto-updated):</p>\n{body}\n{END}'
