@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="1-repository-banner.png" alt="Marco Tevar: Developer & founder" width="100%">
+</p>
+
 # CV - Marco Tevar
 
 One HTML file, no build. `index.html` is the whole site (inline CSS, system fonts, a 20-line language toggle). The PDF at `marco-tevar-cv.pdf` is printed from the same page on every deploy, so the two cannot drift apart.
